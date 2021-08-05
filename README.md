@@ -1,7 +1,7 @@
 # Guardian news search.
 
 ## To start
-* (In a terminal window) Install dependencies with `npm start`
+* (In a terminal window) Install dependencies with `npm install`
 * Rename `.env.dist` to `.env` and add your guardian api key
 * (In a terminal window) Run `npm start` to start server.
 
