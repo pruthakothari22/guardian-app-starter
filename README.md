@@ -1,9 +1,9 @@
 # Guardian news search.
 
 ## To start
-* Install dependencies with `npm start`
+* (In a terminal window) Install dependencies with `npm start`
 * Rename `.env.dist` to `.env` and add your guardian api key
-* Run `npm start` to start server.
+* (In a terminal window) Run `npm start` to start server.
 
 ## Firstly
 You should then be able to browse to `http://localhost:3000` and see our beautiful application screen. You should be able to type some words into the box, hit search, and get a set of results back.
