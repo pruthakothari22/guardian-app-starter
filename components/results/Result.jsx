@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../../css/styles.module.css';
+import { parseJSON, format } from 'date-fns';
 
 function Result({ result }) {
   return (
@@ -10,7 +11,14 @@ function Result({ result }) {
           src={`https://picsum.photos/300?random=${result.id}`}
         ></img>
       </div>
-      <div className={styles.titleCard}>{result.title}</div>
+      <div className={styles.titleCard}>
+        {result.title} <br />
+        {[
+          parseJSON(result.publicationDate).getDate(),
+          format(parseJSON(result.publicationDate), 'MMMM'),
+          parseJSON(result.publicationDate).getFullYear(),
+        ].join(' ')}
+      </div>
       <a className={styles.btnCard} href={result.url}>
         Explore More
       </a>

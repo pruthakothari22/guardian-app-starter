@@ -3,7 +3,6 @@ import axios from 'axios';
 import Results from '../components/results/Results';
 import Input from '../components/utils/Input';
 import Heading from '../components/utils/Heading';
-import styles from '../css/styles.module.css';
 
 const IndexPage = () => {
   const [results, setResults] = useState([]);
