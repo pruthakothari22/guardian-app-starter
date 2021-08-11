@@ -1,0 +1,54 @@
+.heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.input {
+  text-align: center;
+  width: 100%;
+}
+
+.resultContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: auto;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 10px;
+}
+.imgDivCard {
+  width: 100%;
+}
+.imgCard {
+  width: 100%;
+  object-fit: cover;
+  text-align: center;
+  /* padding: 2rem; */
+}
+.titleCard {
+  font-size: 1.3rem;
+  text-align: center;
+}
+.btnCard {
+  text-decoration: none !important;
+  color: white;
+  background-color: black;
+  border-radius: 15px;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  margin: 2rem;
+}

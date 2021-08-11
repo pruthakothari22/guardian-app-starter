@@ -1,38 +1,29 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Results from '../components/results/Results';
+import Input from '../components/utils/Input';
+import Heading from '../components/utils/Heading';
+import styles from '../css/styles.module.css';
 
 const IndexPage = () => {
-  const [term, setTerm] = useState('');
   const [results, setResults] = useState([]);
-  
-  const doSearch = async() => {
+
+  const doSearch = async (term) => {
     const resultSet = await axios.get('/api/search', {
       params: {
-        term: term
-      }
-    })
+        term: term,
+      },
+    });
     setResults(resultSet.data);
-  }
-  
+  };
+
   return (
-    <div>
-      <h1>Guardian Search</h1>
-      <div>
-        <input
-          value={term}
-          onChange={(evt) => setTerm(evt.target.value)} />
-        <button onClick={() => doSearch()}>Search</button>
-      </div>
-      <div>
-        <h2>Results</h2>
-        <ul>
-          { results.map(result => {
-            return <li><a href={result.url}>{result.title}</a></li>
-          })}
-        </ul>
-      </div>
-    </div>
-  )
-}
+    <>
+      <Heading title="Guardian Search" type="h1" />
+      <Input doSearch={doSearch} />
+      <Results results={results} />
+    </>
+  );
+};
 
 export default IndexPage;
